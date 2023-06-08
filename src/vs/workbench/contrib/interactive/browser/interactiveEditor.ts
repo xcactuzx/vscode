@@ -350,7 +350,7 @@ export class InteractiveEditor extends EditorPane {
 		});
 
 		this.#codeEditorWidget = this.#instantiationService.createInstance(CodeEditorWidget, this.#inputEditorContainer, {
-			...getSimpleEditorOptions(),
+			...getSimpleEditorOptions(this.configurationService),
 			...{
 				glyphMargin: true,
 				padding: {
